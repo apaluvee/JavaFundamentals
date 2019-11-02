@@ -4,9 +4,9 @@ public class Application {
 
     public static void main(String[] args) {
 
-       // hello();
-       // doublei();
-       // threeStrings();
+        // hello();
+        // doublei();
+        // threeStrings();
         //ints();
         //sum();
         //threeVariables();
@@ -47,7 +47,7 @@ public class Application {
         System.out.println((long) int1 + int2);
     }
 
-    public static void threeVariables(){
+    public static void threeVariables() {
         Scanner scanner = new Scanner(System.in);
         float f = scanner.nextFloat();
         byte b = scanner.nextByte();
@@ -64,6 +64,10 @@ public class Application {
 
         if (number > 30) {
             System.out.println(number + " is greater than 30");
+        } else if (number == 30) {
+            System.out.println(number + " is equal to 30");
+        } else if (number < 30) {
+            System.out.println(number + " is less than 30");
         }
 
     }
