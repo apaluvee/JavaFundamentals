@@ -160,40 +160,29 @@ public class Application {
 
     public static void milkWine() {
         Scanner scanner = new Scanner(System.in);
+        String word = scanner.nextLine();
 
-        if (scanner.nextLine() == "milk") {
-            System.out.println("M");
-        }
-
-    }
-
-    /*public static void milkWine() {
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-
-        if (name == "milk"){
-        }
-        System.out.println("Price: 50");
-        if (scanner.nextInt() == 50){
-        }
-        System.out.println("done");
-
-
-        if (name == "wine") {
-
-            System.out.println("Enter age: ");
-
-            if (scanner.nextInt() >= 18) {
-
-                System.out.println("Price: 10");
-                if (scanner.nextInt() == 10) {
-                    System.out.println("Done");
-                } else System.out.println("cant buy because of money");
-            } else {
-                System.out.println("less age");
+        while(true){
+            if (word.equals("milk")) {
+                System.out.println("Price: 50");
+                if (scanner.nextInt() == 50) {
+                }
+                System.out.println("done");
+                break;
+            } else word.equals("wine"); {
+                System.out.println("Enter age: ");
+                if (scanner.nextInt() >= 18) {
+                    System.out.println("Price: 10");
+                    if (scanner.nextInt() == 10) {
+                        System.out.println("Done");
+                    } else System.out.println("Cant buy because of money");
+                } else {
+                    System.out.println("Too young to buy wine!");
+                }
+                break;
             }
         }
-    }*/
+    }
 
     public static void divideBy() {
 
