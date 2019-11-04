@@ -159,42 +159,43 @@ public class Application {
     }
 
     public static void milkWine() {
+        System.out.println("Enter: milk or wine");
         Scanner scanner = new Scanner(System.in);
-
-        if (scanner.nextLine() == "milk") {
-            System.out.println("M");
-        }
-
-    }
-
-    /*public static void milkWine() {
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-
-        if (name == "milk"){
-        }
-        System.out.println("Price: 50");
-        if (scanner.nextInt() == 50){
-        }
-        System.out.println("done");
-
-
-        if (name == "wine") {
-
-            System.out.println("Enter age: ");
-
-            if (scanner.nextInt() >= 18) {
-
-                System.out.println("Price: 10");
-                if (scanner.nextInt() == 10) {
-                    System.out.println("Done");
-                } else System.out.println("cant buy because of money");
-            } else {
-                System.out.println("less age");
+        String word = scanner.nextLine();
+        try {
+            while (true) {
+                if (word.equalsIgnoreCase("milk")) {
+                    System.out.println("Price: 5$");
+                    int i = scanner.nextInt();
+                    if (i == 5) {
+                        System.out.println("Thanks!");
+                        break;
+                    } else if (i < 5) {
+                        System.out.println("Not enough money");
+                    } else System.out.println("Too much money");
+                    break;
+                } else if (word.equalsIgnoreCase("wine")) {
+                    System.out.println("What's your age?");
+                    if (scanner.nextInt() < 18) {
+                        System.out.println("Too young to buy wine!");
+                    } else {
+                        System.out.println("Price: 10$");
+                        int i = scanner.nextInt();
+                        if (i == 10) {
+                            System.out.println("Thanks!");
+                        } else if (i < 5) {
+                            System.out.println("Not enough money");
+                        } else System.out.println("Too much money");
+                    } break;
+                } else {
+                    System.out.println("w");
+                    break;
+                }
             }
+        } catch (InputMismatchException e) {
+            System.out.println("This is not a number!");
         }
-    }*/
-
+    }
     public static void divideBy() {
 
         Scanner sc = new Scanner(System.in);
