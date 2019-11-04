@@ -188,7 +188,7 @@ public class Application {
                         } else System.out.println("Too much money");
                     } break;
                 } else {
-                    System.out.println("w");
+                    System.out.println("Out of stock!");
                     break;
                 }
             }
@@ -200,18 +200,20 @@ public class Application {
 
         Scanner sc = new Scanner(System.in);
 
-
         while (true) {
             System.out.println("Enter first number:");
             double value1 = sc.nextDouble();
+            if (value1 == 0) {
+                break;
+            }
             System.out.println("Enter second number:");
             double value2 = sc.nextDouble();
-            if (value1 != 0 || value2 != 0) {
+            if (value1 == 0 || value2 == 0) {
+                break;
+            } else {
                 double division = value1 / value2;
                 System.out.printf("%.4f", division);
-
-            } else {
-                break;
+                System.out.println();
             }
         }
     }
