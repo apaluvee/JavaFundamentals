@@ -9,8 +9,12 @@ public class Homework {
 
         //biggestValueFromArray();
         //findLongestCharS();
-        //triangle1();
-        triangle2();
+        //triangleStars1();
+        //triangleWord();
+        //triangleNumbers();
+        //triangleStars2();
+        triangleEquilateral();
+
 
     }
 
@@ -70,11 +74,14 @@ public class Homework {
             myArray[i] = String.valueOf((char) (rand.nextInt(26) + 'a'));
         }
         System.out.println(Arrays.toString(myArray));
-
     }
 
-    public static void triangle1() {
+
+    //two for loops
+    public static void triangleStars1() {
+        //long start = System.nanoTime();
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number:");
         int input = scanner.nextInt();
         for (int i = 1; i <= input; i++) {
             for (int j = 1; j <= i; j++) {
@@ -82,33 +89,75 @@ public class Homework {
             }
             System.out.println();
         }
+        //System.out.println(System.nanoTime()-start);
     }
 
-    public static void triangle2() {
+
+    public static void triangleWord() {
         Scanner scanner = new Scanner(System.in);
-        int input = scanner.nextInt();
+        System.out.println("Enter number:");
+        String enteredNumber = scanner.nextLine();
+        String numbers = "";
+        String entered = String.valueOf(enteredNumber);
+        for (int i = 0; i < entered.length(); i++) {
+            numbers = numbers + entered.charAt(i);
+            System.out.println(numbers);
+        }
+    }
 
-        String vastus= "";
-        int i = 1;
-        int j = 2;
-        vastus += i;
-        vastus += j;
-
-        for ( j = 1; j <= input; j++) {
-            System.out.print(String.valueOf(j));
+    /**
+     * 1
+     * 12
+     * 123
+     * 1234
+     * 12345
+     */
+    public static void triangleNumbers() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number:");
+        int entered = scanner.nextInt();
+        String result = "";
+        for (int num = 1; num <= entered; num++) {
+            System.out.println(result += num);
         }
     }
 
 
+    //one for loop
+    public static void triangleStars2() {
+        //long start = System.nanoTime();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number:");
+        int input = scanner.nextInt();
+        String result = "";
+        for (int i = 1; i <= input; i++) {
+            System.out.println(result += "*");
+        }
+        //System.out.println(System.nanoTime()-start);
+    }
+
+    /**
+     * triangle with even sides
+     */
+    public static void triangleEquilateral() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter triangle size:");
+        int triangle = scanner.nextInt();
+        for (int i = 1; i <= triangle; i++) {
+            for (int j = triangle; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i) - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 }
+
+
 /**
- * a. triangle,
  * b. *rectangle with diagonals,
  * c. **Christmas tree
-
- * 1
- * 12
- * 123
- * 1234
- * 12345
  */
+
