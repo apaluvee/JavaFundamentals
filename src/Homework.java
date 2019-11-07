@@ -13,7 +13,9 @@ public class Homework {
         //triangleWord();
         //triangleNumbers();
         //triangleStars2();
-        triangleEquilateral();
+        //triangleEquilateral();
+        //christmasTree();
+        rectDiagonal();
 
 
     }
@@ -153,11 +155,82 @@ public class Homework {
             System.out.println();
         }
     }
+
+    /**
+     * c. **Christmas tree
+     */
+    public static void christmasTree() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter triangle size:");
+        int treeSize = scanner.nextInt();
+
+        for (int i = 1; i <= treeSize - 2; i++) {
+            for (int j = (treeSize - 2) + 2; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i) - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 1; i <= treeSize - 1; i++) {
+            for (int j = (treeSize - 1) + 1; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i) - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 1; i <= treeSize; i++) {
+            for (int j = treeSize; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i) - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 1; i <= treeSize - (treeSize / 2); i++) {
+            for (int j = 1; j <= treeSize - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= treeSize - (treeSize - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+    /**
+     * b. *rectangle with diagonals,
+     */
+    public static void rectDiagonal() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter rectangle size:");
+        int entered = scanner.nextInt();
+
+        for(int i = 0; i < entered; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        for (int j = 1; j < entered -1; j++) {
+            System.out.print("*");
+            for (int k = 0; k < entered - 2; k++) {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            System.out.println();
+        }
+        for (int row = 0; row < entered; row ++) {
+            System.out.print("*");
+        }
+
+    }
+
 }
 
 
-/**
- * b. *rectangle with diagonals,
- * c. **Christmas tree
- */
+
 
