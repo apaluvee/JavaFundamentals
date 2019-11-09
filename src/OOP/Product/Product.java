@@ -1,4 +1,4 @@
-package Product;
+package OOP.Product;
 
 public class Product {
 
@@ -33,7 +33,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product.Product{" +
+        return "OOP.Product.OOP.Product{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
                 '}';

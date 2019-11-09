@@ -15,7 +15,7 @@ public class Homework {
         //triangleStars2();
         //triangleEquilateral();
         //christmasTree();
-        rectDiagonal();
+        //rectDiagonal();
 
 
     }
@@ -62,6 +62,9 @@ public class Homework {
      * 10. Write an application that will find the longest char sequence within an array of type String.
      * Test it in the same way as you have done in the previous exercise.
      * ### How will you generate random char sequences?
+     *
+     *
+     * Incomplete
      */
 
     public static void findLongestCharS() {
@@ -205,6 +208,10 @@ public class Homework {
 
     /**
      * b. *rectangle with diagonals,
+     *
+     *
+     *
+     * Incomplete
      */
     public static void rectDiagonal() {
         Scanner scanner = new Scanner(System.in);

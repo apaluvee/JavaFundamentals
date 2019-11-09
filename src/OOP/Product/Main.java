@@ -1,4 +1,4 @@
-package Product;
+package OOP.Product;
 
 import java.util.Scanner;
 

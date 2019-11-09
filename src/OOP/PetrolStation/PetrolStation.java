@@ -1,4 +1,4 @@
-package Petrol;
+package OOP.PetrolStation;
 
 public class PetrolStation {
 
@@ -31,7 +31,7 @@ public class PetrolStation {
 
     @Override
     public String toString() {
-        return "Petrol.PetrolStation{" +
+        return "Petrol.OOP.PetrolStation{" +
                 "price=" + price +
                 ", petrolAmount=" + petrolAmount +
                 '}';
