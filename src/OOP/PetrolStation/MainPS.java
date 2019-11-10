@@ -28,7 +28,6 @@ public class MainPS extends PetrolStation {
                     System.out.println("Amount: " + i);
                     double total = station.getPrice() * i;
                     System.out.println(total);
-                    System.out.println("done");
 
 
                 } else if (word.equals("finish")) {
@@ -39,7 +38,6 @@ public class MainPS extends PetrolStation {
                 }*/
                     break;
                 } else {
-                    System.out.println("sss");
 
                 }
             } catch (InputMismatchException e) {
