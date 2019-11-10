@@ -16,9 +16,11 @@ public class Application {
         //twoNumbers();
         //numberName();
         //nestedForLoop();
-        milkWine();
+        //milkWine();
         //divideBy();
         //printBack();
+        //printSum();
+        testSumFromOneToN();
     }
 
     public static void hello() {
@@ -186,7 +188,8 @@ public class Application {
                         } else if (i < 5) {
                             System.out.println("Not enough money");
                         } else System.out.println("Too much money");
-                    } break;
+                    }
+                    break;
                 } else {
                     System.out.println("Out of stock!");
                     break;
@@ -196,6 +199,7 @@ public class Application {
             System.out.println("This is not a number!");
         }
     }
+
     public static void divideBy() {
 
         Scanner sc = new Scanner(System.in);
@@ -225,6 +229,36 @@ public class Application {
             reverse = reverse + name.charAt(i);
         }
         System.out.println(reverse);
+    }
+
+    /**
+     * Testing part
+     */
+
+    public static int printSum() {
+        //Scanner scanner = new Scanner(System.in);
+        //int number = scanner.nextInt();
+        int sum = 0;
+        int number = -3;
+        if (number < 1) {
+            for (int i = 1; i >= number; i--) {
+                sum = sum+i;
+            }
+        } else {
+            for (int i = 1; i <= number; i++) {
+                sum = sum + i;
+            }
+        }
+
+        return sum;
+    }
+    public static void testSumFromOneToN() {
+        int expectedResult = -5; // n = 1+2+3+4+5
+        int actualResult = printSum();
+
+        if (expectedResult != actualResult) {
+            throw new ArithmeticException();
+        }
     }
 
 
