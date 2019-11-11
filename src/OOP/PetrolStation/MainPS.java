@@ -13,12 +13,12 @@ public class MainPS extends PetrolStation {
         Scanner scanner = new Scanner(System.in);
 
         boolean goOn = true;
+
+        System.out.println("Enter continue or finish: ");
+
         while (goOn) {
             try {
-
-                System.out.println("Enter continue or finish: ");
                 String word = scanner.nextLine();
-
 
                 if (word.equals("continue")) {
                     System.out.println("Enter amount: ");
@@ -28,6 +28,7 @@ public class MainPS extends PetrolStation {
                     System.out.println("Amount: " + i);
                     double total = station.getPrice() * i;
                     System.out.println(total);
+                    System.out.println("done");
 
 
                 } else if (word.equals("finish")) {
@@ -38,7 +39,7 @@ public class MainPS extends PetrolStation {
                 }*/
                     break;
                 } else {
-
+                    System.out.println("Please use continue or finish");
                 }
             } catch (InputMismatchException e) {
 
